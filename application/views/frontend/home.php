@@ -38,7 +38,7 @@
 
     <div class="row" style="margin-top:20px;">
         
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h1 class="media border">Panel Berita</h1>
             <div class="media border p-3" style="margin-bottom:5px;">
                 <img src="<?php echo base_url() ?>assets/img/150.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
@@ -66,5 +66,12 @@
 
             <button type="button" class="btn btn-primary btn-block">Berita Seleangkapnya</button>
         </div>
+
     </div>
+
+    <div class="row">
+        
+    </div>
+
 </div>
+
