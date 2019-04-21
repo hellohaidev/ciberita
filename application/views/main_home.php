@@ -17,7 +17,7 @@
         <a class="navbar-brand" href="#">Web Berita</a>
 
         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="#">Tentang Kami</a>
                 </li> 
                 <form class="form-inline" action="/action_page.php">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <input class="form-control " type="text" placeholder="Search">
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
             </ul>
@@ -51,5 +51,15 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+
+
+    <!-- Third Party -->
+    <script src="<?php echo base_url() ?>assets/js/jquery.slimscroll.min.js"></script>
+
+    <script>
+        $('#inner-content-div').slimScroll({
+		    height: '250px'
+        });
+    </script>
 </body>
 </html>
