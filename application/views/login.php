@@ -19,6 +19,10 @@
 </head>
 <body class="hold-transition login-page">
 
+    
+        
+    
+
     <div class="login-box">
 
         <div class="login-logo">
@@ -26,24 +30,66 @@
         </div>
         
         <div class="login-box-body">
+        <?php if ($this->session->flashdata('errors')): ?>
+
+        <?php echo $this->session->flashdata('errors'); ?>
+
+        <?php endif; ?>
+
+
+
+        <?php if ($this->session->flashdata('login_failed')): ?>
+
+        <?php echo $this->session->flashdata('login_failed'); ?>
+
+        <?php endif; ?>
+
+        <?php if ($this->session->flashdata('no_access')): ?>
+
+        <?php echo $this->session->flashdata('no_access'); ?>
+
+        <?php endif; ?>
             <p class="login-box-msg">Default Username : admin, Password : admin</p>
 
-            <form action="../../index2.html" method="post">
+            <?php echo form_open('index.php/Login/access') ?>
                 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" name="username" placeholder="Username">
+
+                    <?php 
+                        $data = array(
+                            'class' => 'form-control',
+                            'name' => 'username',
+                            'placeholder' => 'Username'
+                        );
+                    ?>
+                    <?php echo form_input($data) ?>
                     <i class="fas fa-user fa-2x form-control-feedback"></i>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" name="password" placeholder="Password">
+
+                    <?php 
+
+                        $data = array(
+                            'class'=>'form-control',
+                            'name' => 'password',
+                            'placeholder' => 'Password'
+                        );
+                    ?>
+                    <?php echo form_input($data) ?>
                     <i class="fas fa-lock fa-2x form-control-feedback"></i>
                 </div>
                 <div class="row">
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                    </div>
+                        <?php 
 
+                            $data = array(
+                                'class' => 'btn btn-primary btn-block btn-flat',
+                                'value' => 'Login'
+                            );
+                        ?>
+                        <?php echo form_submit($data) ?>
+                    </div>
                 </div>
-            </form>
+            <?php echo form_close() ?>
 
         </div>
 
